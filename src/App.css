@@ -1,38 +1,91 @@
-.App {
+:root{
+  --purple: #8758ff;
+  --white: #fff;
+  --green: #4caf50;
+  --light-green: #45a049;
+  --light-white: #f4f4f4;
+  --grey: #888;
+  --dark-grey: #333;
+  --light-grey: #ccc;
+  --black: rgb(17, 16, 16);
+}
+
+.App{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-white);
+}
+
+.todo-container {
+  max-width: 600px;
+  margin: 20px auto;
+  margin-top: 5rem;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
+  color: var(--dark-grey);
+  margin-bottom: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"] {
+  width: calc(100% - 80px);
+  padding: 1rem;
+  margin-bottom: 10px;
+  border: 1px solid var(--light-grey);
+  border-radius: 5px 0 0 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 1.1rem 12px;
+background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  background-color: var(--light-green);
+}
+
+/* ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+li:last-child {
+  border-bottom: none;
+} */
+
+.Todo{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  margin-right: 10px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-trash{
+  margin-left: 0.75rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.completed {
+  text-decoration: line-through;
+  color: var(--grey);
 }
